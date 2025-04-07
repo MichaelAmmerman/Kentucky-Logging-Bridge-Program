@@ -3,7 +3,7 @@
 
 *This project is intended to examine the potential effectiveness of the Kentucky Logging Bridge Program and how using dynamic web-based databases can effectively integrate with web-mapping to spread awareness of the effect the Kentucky Logging Bridge Program has on non-point source water pollution.*
 
-<img src="graphics\finallogotan.png" width="100">
+<img src="graphics\finallogotan.png" width="400">
 
 <p>Forests play a vital role in Kentucky’s economy, covering nearly half of the state's land and supporting a robust forest products industry that contributes over $13 billion annually. Logging, a fundamental part of this sector, provides raw materials for lumber, paper, and wood products, while also supporting thousands of jobs across rural communities. However, while essential to the economy, logging can also be a significant source of non-point source pollution. As trees are harvested and land is disturbed, rainwater runoff can carry sediment, nutrients, and other pollutants into nearby streams and rivers, impacting water quality and aquatic ecosystems.</p>
 
