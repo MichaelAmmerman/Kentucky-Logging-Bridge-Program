@@ -1,11 +1,12 @@
 # Assessing the Economic, Environmental, and Public Engagement Impacts of the Kentucky Logging Bridge Program
-<<<<<<< HEAD
 ## A Multi-Faceted Approach to Sustainable Forestry and Stream Protection in Rural Logging Operations
 
 ## I. Introduction
 
 <p>In 1994, the Kentucky General Assembly established the Kentucky Agriculture Water Quality Act to protect the waters of the Commonwealth from agricultural non-point source pollution. The Act emphasizes the use of Best Management Practices (BMPs) as the most effective, practical, and economical means of reducing pollutants. BMPs include techniques such as erosion control, nutrient management, and the implementation of riparian buffers, which collectively work to minimize the runoff of pollutants into surface and groundwater. By mandating these practices, the Act not only safeguards Kentucky’s water resources but also promotes sustainable agricultural operations. This legislative initiative serves as a cornerstone for environmental stewardship, continuing to guide collaborative efforts among farmers, regulatory agencies, and conservation groups. </p>
 
-<p>In 1998, four years after the enactment of the Kentucky Agriculture Water Quality Act, the Kentucky General Assembly established the Kentucky Forest Conservation Act. This legislation was introduced to protect the state’s forest resources and promote sustainable forest management practices. It established that all commercial logging operations must have a trained Kentucky Master Logger on site and required the Kentucky Division of Forestry to verify that all commercial timber harvesting operations comply with all state regulations and use proper Best Management Practices (BMPS). While also stating that the loggers, not the landowners, are responsible for abiding by these regulations. </p>
+<p>In 1998, four years after the enactment of the Kentucky Agriculture Water Quality Act, the Kentucky General Assembly established the Kentucky Forest Conservation Act to explicitly state the differences in regulations between the agricultural water quality  and logging operations water quality. This legislation was introduced to protect the state’s forest resources and promote sustainable forest management practices. It established that all commercial logging operations must have a trained Kentucky Master Logger on site and required the Kentucky Division of Forestry to verify that all commercial timber harvesting operations comply with all state regulations and use proper Best Management Practices (BMPS). While also stating that the loggers, not the landowners, are responsible for abiding by these regulations. </p>
+
+
 
 
