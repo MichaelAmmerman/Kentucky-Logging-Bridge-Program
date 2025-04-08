@@ -18,8 +18,7 @@
     <li>Avoid depositing soil into the stream and channel</li>
     <li>Immediately stabilize disturbed ground associated with crossing (excluding the active trail or road surface) to reduce runoff into streams</li>
 </ul>
-
-
+These best management practices are essential for minimizing environmental impacts during logging operations. By prioritizing elevated crossings and enforcing strict stabilization and sediment control measures, Kentucky aims to protect water quality and maintain the ecological integrity of stream systems. Adhering to these guidelines is not only a matter of environmental stewardship but also a legal requirement under Kentucky state law, ensuring compliance with regulations designed to safeguard natural resources during forestry activities.
 </p>
 
 
