@@ -38,10 +38,12 @@ These best management practices are essential for minimizing environmental impac
 
 <img src="images\topimagWoodPanel.png"><figcaption>Wood Panel bridge setup to cross a stream (Photo Credit Dr. Jeffery Stringer, Uk Dept. of Forestry, UKY BMP Field guide)</figcaption>
 
-<img src="images\bridgetop.png"><figcaption>Drawing of top panel bridges with hay bells used as water control structures(Image Credit Dr. Jeffery Stringer, Uk Dept. of Forestry, UKY BMP Field guide)</figcaption>
+<img src="images\bridgetop.png"><figcaption>Drawing of top panel bridges with hay bells used as water control structures (Image Credit Dr. Jeffery Stringer, Uk Dept. of Forestry, UKY BMP Field guide)</figcaption>
 
-<p><b>Bridge Mats</b>- Similar to wood panel bridges are made of wood that is sectioned to gether to create a strong support bridge, these however differ from wood panel bridges as they are made up of a singular wooden structure that is typical strong and more durable than that of a wooden panel bridge. These are considered to be the best crossing to minimize sediment in streams and channels</p>
+<p><b>Bridge Mats</b>- Similar to wood panel bridges are made of wood that is sectioned to gether to create a strong support bridge, these however differ from wood panel bridges as they are made up of a singular wooden structure that is typical stronger and more durable than that of a wooden panel bridge. These are considered to be the best crossing to minimize sediment in streams and channels</p>
 
 <img src="images\streamcrossingstudy_reeves_rf_2007_027.JPG"><figcaption>Skidder skidding logs across a bridge mat in Robinson Forest.</figcaption>
 
+<p><b>PVC Pipe Bundles</b>- Are comprised of 40 PVC pipes often held together using steel cables and are then placed horizontally into streams to allow water to continuously flow in stream</p>
 
+<img src="images\PVCBundle.png"><figcaption>PVC bundle being placed into stream ((Photo Credit Dr. Jeffery Stringer, Uk Dept. of Forestry, UKY BMP Field guide))</figcaption>
