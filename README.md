@@ -24,8 +24,9 @@
 These best management practices are essential for minimizing environmental impacts during logging operations. By prioritizing elevated crossings and enforcing strict stabilization and sediment control measures, Kentucky aims to protect water quality and maintain the ecological integrity of stream systems. Adhering to these guidelines is not only a matter of environmental stewardship but also a legal requirement under Kentucky state law, ensuring compliance with regulations designed to safeguard natural resources during forestry activities.
 </p>
 
-### Types of Crossings:
+### Types of Stream and Channel Crossings:
 
-<b>Fords</b>: Non-Elevated crossing established on Hard or firm stream or channel beds.
-<img src="images\grvlrdnobrdg0.png"><figcaption>Fig.1 Example of a ford, with gravel reinforcement approach</figcaption>
+<p><b>Fords</b>- Non-Elevated crossing established on Hard or firm stream or channel beds. Logs and logging debris is drug through channel bottom depositing heavy sediment particles into stream.</p>
+
+<img src="images\grvlrdnobrdg0.png"><figcaption>Fig.1 Example of a ford, with armoured approach (Photo Credit Dr. Jeffrey Stringer, UK Dept. of Forestry)</figcaption>
 
