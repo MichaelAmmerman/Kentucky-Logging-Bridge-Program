@@ -3,7 +3,10 @@
 
 *This project is intended to examine the potential effectiveness of the Kentucky Logging Bridge Program and how using dynamic web-based database systems can effectively be integrate with web-mapping to spread awareness of the effects the Kentucky Logging Bridge Program has on non-point source water pollution.*
 
+
 <img src="graphics\finallogotan.png" width="400"> <img src="graphics\Kmllogo_color_2014 wo background-2.png" width="400">
+
+## I. Introduction 
 
 <p>Forests play a vital role in Kentucky’s economy, covering nearly half of the state's land and supporting a robust forest products industry that contributes over $13 billion annually. Logging, a fundamental part of this sector, provides raw materials for lumber, paper, and wood products, while also supporting thousands of jobs across rural communities. However, while essential to the economy, logging can also be a significant source of non-point source pollution. As trees are harvested and land is disturbed, rainwater runoff can carry sediment, nutrients, and other pollutants into nearby streams and rivers, impacting water quality and aquatic ecosystems.</p>
 
@@ -21,5 +24,8 @@
 These best management practices are essential for minimizing environmental impacts during logging operations. By prioritizing elevated crossings and enforcing strict stabilization and sediment control measures, Kentucky aims to protect water quality and maintain the ecological integrity of stream systems. Adhering to these guidelines is not only a matter of environmental stewardship but also a legal requirement under Kentucky state law, ensuring compliance with regulations designed to safeguard natural resources during forestry activities.
 </p>
 
+### Types of Crossings:
 
+<b>Fords</b>: Non-Elevated crossing established on Hard or firm stream or channel beds.
+<img src="images\grvlrdnobrdg0.png"><figcaption>Fig.1 Example of a ford, with gravel reinforcement approach</figcaption>
 
