@@ -30,3 +30,7 @@ These best management practices are essential for minimizing environmental impac
 
 <img src="images\grvlrdnobrdg0.png"><figcaption>Fig.1 Example of a ford, with armoured approach (Photo Credit Dr. Jeffrey Stringer, UK Dept. of Forestry)</figcaption>
 
+#### Elevated Stream Crossings
+
+<p>Elevated crossings are designed to keep equipment above the stream or channel bed and must be used whenever economic and topographic conditions allow. A crossing is considered economically feasible when the value of the timber being transported justifies the costs associated with installing, using, and removing the structure. There are many suitable elevated crossing options, including temporary ones that can be installed quickly and affordably. However, certain site conditions—like steep stream banks or wide channels—may present technical challenges that limit their use. In such cases, alternative solutions must still meet BMP requirements.</p>
+
