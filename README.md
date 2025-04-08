@@ -28,7 +28,7 @@ These best management practices are essential for minimizing environmental impac
 
 <p><b>Fords</b>- Non-Elevated crossing established on Hard or firm stream or channel beds. Logs and logging debris is drug through channel bottom depositing heavy sediment particles into stream.</p>
 
-<img src="images\grvlrdnobrdg0.png"><figcaption>Fig.1 Example of a ford, with armoured approach (Photo Credit Dr. Jeffrey Stringer, UK Dept. of Forestry)</figcaption>
+<img src="images\grvlrdnobrdg0.png"><figcaption>Fig.1 Example of a ford, with armoured approach (Photo Credit: Dr. Jeffrey Stringer, UK Dept. of Forestry)</figcaption>
 
 #### Elevated Stream Crossings
 
