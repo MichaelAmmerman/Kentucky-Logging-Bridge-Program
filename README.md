@@ -34,3 +34,8 @@ These best management practices are essential for minimizing environmental impac
 
 <p>Elevated crossings are designed to keep equipment above the stream or channel bed and must be used whenever economic and topographic conditions allow. A crossing is considered economically feasible when the value of the timber being transported justifies the costs associated with installing, using, and removing the structure. There are many suitable elevated crossing options, including temporary ones that can be installed quickly and affordably. However, certain site conditions—like steep stream banks or wide channels—may present technical challenges that limit their use. In such cases, alternative solutions must still meet BMP requirements.</p>
 
+<p><b>wooden panel bridges</b>- Often comprised of two or three panels, that are placed together to extend the width of bridge area and are typical in lengths of 18 to 30 feet</p>
+
+<img src="images\topimagWoodPanel.png"><figcaption>Wood Panel bridge setup to cross a stream (Photo Credit Dr. Jeffery Stringer, Uk Dept. of Forestry, UKY BMP Field guide)</figcaption>
+
+<img src="images\bridgetop.png"><figcaption>Drawing of top panel bridges(Image Credit Dr. Jeffery Stringer, Uk Dept. of Forestry, UKY BMP Field guide)</figcaption>
