@@ -59,8 +59,14 @@ These best management practices are essential for minimizing environmental impac
 ### Study on Headwater Streams in Eastern Kentucky and How Bridge types Effect Sediment input into Headwater Streams:
 *All the data, charts, and graphs in this section was procured from Chris Reeves masters study "Effectiveness of Elevated Skid Trail Headwater Stream Crossings in the Cumberland Plateau (2012)"*
 
-<p>Elevated stream crossings have been proven to significantly reduce sediment runoff at a minimal additional cost compared to other best management practices (BMPs) required for logging operations. Among the various types of temporary stream crossing, wooded bridges are most often the most expensive crossing type but have the shortest insulation time, lowest amount of stream sediment in streams, and are considered to be the most efficient crossing for skidding in a timely manner. This is most often being referred to as cycle time which is the time it takes to get logs from where they were felled and on to the log landing. Budgetary restricts are a large reason why wood bridges are not often used. The Kentucky Logging Bridge Program aim to fix this is.</p>
+<p>Elevated stream crossings have been proven to significantly reduce sediment runoff at a minimal additional cost compared to other best management practices (BMPs) required for logging operations. Among the various types of temporary stream crossing, wooded bridges are most often the most expensive crossing type but have the shortest insulation time, lowest amount of deposits of sediment in streams, and are considered to be the most efficient crossing for skidding in a timely manner. This is most often being referred to as cycle time which is the time it takes to get logs from where they were felled and on to the log landing. Budgetary restricts are a large reason why wood bridges are not often used. The Kentucky Logging Bridge Program aims to fix this issue.</p>
 
+<img src="images\Total_Sediment_Sediment.png">
 
+<img src="images\Total_Sediment_Load .png">
 
+## Kentucky Logging Bridge Program: 
 
+### Introduction
+
+<p>Kentucky’s logging industry is an essential part of the state’s economy, especially in rural areas, where timber harvesting provides jobs and supports local economies. However, logging operations frequently intersect with the state’s waterways, and improper crossings of streams and channels can lead to significant environmental degradation. The Kentucky Logging Bridge Program, initiated by the University of Kentucky’s Department of Forestry and Natural Resources, offers an innovative solution to these challenges. The program provides loggers with affordable, reusable temporary wooden bridges that help prevent sediment runoff into waterways during timber harvesting operations. This paper explores the economic, environmental, and public awareness impacts of the Kentucky Logging Bridge Program and its vital role in promoting sustainable forestry practices across the state.</p>
