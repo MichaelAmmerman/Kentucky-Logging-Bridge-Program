@@ -74,10 +74,15 @@ These best management practices are essential for minimizing environmental impac
 ### Economic Impact
 
 <p>The Kentucky Logging Bridge Program aims play a significant role in the state’s logging industry by making sustainable logging practices more affordable and accessible to small, family-owned logging operations. Typically, purchasing or renting heavy-duty bridges for stream crossings is prohibitively expensive, especially for rural, small-scale loggers who make up a significant portion of Kentucky’s logging community. The rent-to-own model employed by the program allows loggers to access high-quality temporary bridges without a large upfront investment. This approach reduces financial barriers and helps ensure that smaller logging companies remain competitive and compliant with state environmental regulations. Furthermore, by reducing the risk of fines associated with improper stream crossings, the program ensures that loggers can continue to operate smoothly, protecting their economic interests.
+
+Cost Model - The Cost is %25 percent of the Actual Bridge:
 <ul>
-<li></li>
-
-
+<li>18’ x 8” x 4’ at approximately $425. Rented/sold at a rate of $106.25- or six-monthly
+payments of $18.</li>
+<li>20’ x 12’’ x 4’ at approximately $875. Rented/sold at $220 or six-monthly payments
+of $37.</li>
+<li>24’ X 12” x 4’ at approximately $1100. Rented/sold at $275 or six-monthly payments
+of $46.</li>
 </ul>
 </p>
 
