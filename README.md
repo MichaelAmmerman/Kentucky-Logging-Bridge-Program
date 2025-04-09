@@ -112,7 +112,7 @@ of $46.</li>
 CREATE DATABASE KYLoggingBridge;
 ```
 <ul>
-<li>Crete Table (LoggingBridgeData):</li>/<ul>
+<li>Crete Table (LoggingBridgeData):</li></ul>
 
 ```sql
 CREATE  TABLE LoggingBridgeData (
@@ -129,5 +129,5 @@ CREATE  TABLE LoggingBridgeData (
     MasterLoggerNumber varchar(255),
     Paid varchar(25),
     PRIMARY KEY (Id)
-)
+);
 ```
