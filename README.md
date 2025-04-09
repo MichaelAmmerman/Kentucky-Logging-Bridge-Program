@@ -376,4 +376,4 @@ fputcsv($file, $csvHeader);
 ?>
 ```
 <img src="images\cordMysql.JPG">
-<img src="images\loggigndatasql.JPG">
+<img src="images\loggigndatasql.JPG"><figcaption>Look at the DataBase through the GUI MySQL Workbench</figcaption>
