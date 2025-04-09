@@ -44,6 +44,13 @@ These best management practices are essential for minimizing environmental impac
 
 <img src="images\streamcrossingstudy_reeves_rf_2007_027.JPG"><figcaption>Skidder skidding logs across a bridge mat in Robinson Forest.</figcaption>
 
-<p><b>PVC Pipe Bundles</b>- Are comprised of 40 PVC pipes often held together using steel cables and are then placed horizontally into streams to allow water to continuously flow in stream</p>
+<p><b>PVC Pipe Bundles</b>- Are comprised of 40 PVC pipes often held together using steel cables and are then placed horizontally into streams to allow water to continuously flow in stream. Typically considered to be a very costly form of and elevated stream crossing</p>
 
-<img src="images\PVCBundle.png"><figcaption>PVC bundle being placed into stream ((Photo Credit Dr. Jeffery Stringer, Uk Dept. of Forestry, UKY BMP Field guide))</figcaption>
+<img src="images\PVCBundle.png"><figcaption>PVC bundle being placed into stream (Photo Credit Dr. Jeffery Stringer, Uk Dept. of Forestry, UKY BMP Field guide)</figcaption>
+
+<p><b>Culverts</b>- are typically readily available and are very commonly used for channel crossings. They do however require a significant amount of dirt filling increasing the amount of sediment that enters into streams. It also typically changes the stream morphology creating issues in the movement and migration of aquatic species.</p>
+
+<img src="images\streamcrossingstudy_reeves_rf_2007_001.JPG"><figcaption>Culvert after a period of high rainfall (Photo Credit Dr. Jeffery Stringer, Uk Dept. of Forestry, UKY BMP Field guide)</figcaption>
+
+<img src="images\streamcrossingstudy_reeves_rf_2007_031.png"><figcaption>Chris Reeves skidding a log across a culvert during his masters project</figcaption>
+
