@@ -294,5 +294,60 @@ $results = mysqli_query($conn,$sql); // runs query to web database
 ```
 
 <ul>
-<li>Develop web form to insert coordinate into coordinates database</li>
+<li>Develop web form to insert coordinate into coordinates database:</li>
 </ul>
+
+```html
+<!DOCTYPE html>
+
+<html>
+<body>
+    <form action="/MastersLoggingBridgeProgram/csvCreator.php" method="post">
+        Latitude (N): <input type="number" step="0.0000000001" name="lat" required><br>
+        Longitude (W): <input type="number" step="0.000000001" name="lon" required><br>
+        Master Logger Number: <input type="text" name="LoggerNumber" required><br>
+        <input type="submit" value="Submit">
+
+    </form>
+</body>
+```
+
+<ul>
+<li>Develop action page to insert data into data base</li>
+</ul>
+
+```php
+$servername = "208.109.75.17";
+$username = "mjam224";
+$password = "Wildcat3!";
+$database = "KYLoggingBridge";
+
+$conn = mysqli_connect($servername, $username, $password, $database);
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+  }
+  
+  
+    $lat = $_POST["lat"];
+    $lon = $_POST["lon"];
+    $masterNumber = $_POST["LoggerNumber"];
+  
+```
+
+<ul>
+<li>Develop SQL code to insert data into database</li>
+</ul>
+
+```sql
+INSERT INTO cordinates_test (cordinates_test.lat, cordinates_test.lon, MasterLggerNumber) VALUES ('$lat', '$lon', '$masterNumber');
+```
+
+<ul>
+<li>Adjust SQL to work with PHP variables</li>
+</ul>
+
+```php
+$sql = "INSERT INTO cordinates_test (cordinates_test.lat, cordinates_test.lon, MasterLggerNumber) VALUES ('$lat', '$lon', '$masterNumber');"; // insert values into database
+$results = mysqli_query($conn,$sql);
+```
