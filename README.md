@@ -57,8 +57,10 @@ These best management practices are essential for minimizing environmental impac
 <p>Kentucky Revised Statues require that at the completion of all timber harvesting jobs crossing are to be removed unless authorized to do so. This can be a hugh bottle neck in the process of retiring logging operations.</p>
 
 ### Study on Headwater Streams in Eastern Kentucky and How Bridge types Effect Sediment input into Headwater Streams:
-*All the data in this section was procured from Chris Reeves masters study "Effectiveness of Elevated Skid Trail Headwater Stream Crossings in the Cumberland Plateau (2012)"*
+*All the data, charts, and graphs in this section was procured from Chris Reeves masters study "Effectiveness of Elevated Skid Trail Headwater Stream Crossings in the Cumberland Plateau (2012)"*
 
-<p></p>
+<p>Elevated stream crossings have been proven to significantly reduce sediment runoff at a minimal additional cost compared to other best management practices (BMPs) required for logging operations. Among the various types of temporary stream crossing, wooded bridges are most often the most expensive crossing type but have the shortest insulation time, lowest amount of stream sediment in streams, and are considered to be the most efficient crossing for skidding in a timely manner. This is most often being referred to as cycle time which is the time it takes to get logs from where they were felled and on to the log landing. Budgetary restricts are a large reason why wood bridges are not often used. The Kentucky Logging Bridge Program aim to fix this is.</p>
+
+
 
 
