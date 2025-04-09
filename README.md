@@ -185,8 +185,57 @@ for (var i=0; i <= BridgeType.length - 1; i++){
 ```
 
 <ul>
-<li>Develop SQL and PHP code to insert submitted for into database</li></ul>
+<li>Develop SQL and PHP code to insert submitted into database</li></ul>
 
 ```sql
 INSERT INTO LoggingBridgeData(First_Name, Last_Name, Master_Logger, Bridge_Type, Number18, Number20, Number24, Number30, PhoneNumber, MasterLoggerNumber, Paid) VALUES (Value1, Value2, Value3, Value4, Value5, Value6, Value7, Value8, Value9, value10, value11);
+```
+
+```php
+<?php 
+
+$servername = "208.109.75.17";
+$username = "mjam224";
+$password = "Wildcat3!";
+$database = "KYLoggingBridge";
+$tableNameForInputOfData = "KYLoggingBridge";
+
+$conn = mysqli_connect($servername, $username, $password, $database);
+
+if(!$conn){
+    die("Connection failed: " . mysqli_connect_error());
+
+}
+
+else{
+    date_default_timezone_set("America/New_York");
+    $firstName = $_POST["firstname"];
+    $lastName = $_POST["lastname"];
+    $paid = $_POST["paid"];
+    $number18 = $_POST["Number18"];
+    $number20 = $_POST["Number20"];
+    $number24 = $_POST["Number24"];
+    $number30 = $_POST["Number30"];
+    $masterLoggerNumber = $_POST["LoggerNumber"];
+    $bridgeType = $_POST["BridgeTypes"];
+    $lat = $_POST["lat"];
+    $lon = $_POST["lon"];
+    $phoneNumber = $_POST["Phone"];
+}
+
+echo $firstName, "<br>";
+echo $lastName, "<br>";
+echo $paid, "<br>";
+echo $number18, "<br>";
+echo $number20, "<br>";
+echo $number24, "<br>";
+echo $number30, "<br>";
+echo $masterLoggerNumber, "<br>";
+echo $bridgeType, "<br>";
+echo $lat, "<br>";
+echo $lon, "<br>";
+echo $phoneNumber, "<br>";
+
+
+?>
 ```
