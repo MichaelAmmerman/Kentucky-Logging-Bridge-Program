@@ -107,7 +107,7 @@ of $46.</li>
 <ul>
 <li>Develop database server - August 2023 (Sameone host the master logger database)</li>
 <li>Create database:</li>
-```sql 
+```sql
 CREATE DATABASE KYLoggingBridge;
 ```
 </ul>
