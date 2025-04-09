@@ -183,3 +183,10 @@ for (var i=0; i <= BridgeType.length - 1; i++){
     
 </html>
 ```
+
+<ul>
+<li>Develop SQL and PHP code to insert submitted for into database</li></ul>
+
+```sql
+INSERT INTO LoggingBridgeData(First_Name, Last_Name, Master_Logger, Bridge_Type, Number18, Number20, Number24, Number30, PhoneNumber, MasterLoggerNumber, Paid) VALUES (Value1, Value2, Value3, Value4, Value5, Value6, Value7, Value8, Value9, value10, value11);
+```
