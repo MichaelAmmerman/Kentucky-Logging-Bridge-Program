@@ -133,9 +133,8 @@ CREATE  TABLE LoggingBridgeData (
 ```
 
 <ul>
-<li>Create Table (cordinates_test)</li>
-*Yes I know I spelled it wrong, but only I will know, well I guess you to but it has no effect on the UI for someone*
-</ul>
+<li>Create Table (cordinates_test):</li></ul>
+*Yes I know I spelled it wrong, but only I will know, we'll I guess you to but it has no effect on the UI and its all on the backend*
 
 ```sql
 CREATE TABLE cordinates_test(
@@ -145,3 +144,4 @@ lon float,
 MasterLggerNumber varchar(255)
 );
 ```
+
