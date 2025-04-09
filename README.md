@@ -97,3 +97,18 @@ of $46.</li>
 ### Conclusion
 
 <p>The Kentucky Logging Bridge Program is a vital initiative that addresses both the immediate and long-term needs of the state’s logging industry. By offering loggers an affordable, sustainable solution for crossing streams, the program enhances economic resilience and ensures compliance with environmental regulations. Moreover, by reducing sediment runoff and protecting aquatic ecosystems, the program supports Kentucky’s commitment to preserving its natural resources. As an educational and outreach tool, the program fosters greater public awareness of sustainable forestry practices, strengthening the connection between the logging industry and the communities it serves. Ultimately, the Kentucky Logging Bridge Program serves as a model for how practical innovation can bridge the gap between industry needs and environmental conservation.</p>
+
+## Methodology
+
+### DataBase Development and Hosting
+
+<p>The primary goal of this map is to effectively communicate the impact of these bridges in reducing stream sediment, while also showing their locations, in a way that is easily accessible to the public. The system is designed to be user-friendly, allowing individuals with minimal background in databases or mapping to update both the database and the map simultaneously. This is accomplished through an HTML web form that inputs data into a MySQL database hosted on GoDaddy.com, using the PHP MySQLi plugin for seamless integration.</p>
+
+<ul>
+<li>Develop database server - August 2023 (Sameone host the master logger database)</li>
+<li>Create database:</li>
+```sql 
+CREATE DATABASE KYLoggingBridge;
+
+```
+</ul>
