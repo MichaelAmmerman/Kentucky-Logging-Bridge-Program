@@ -115,7 +115,7 @@ CREATE DATABASE KYLoggingBridge;
 <li><b>Create Table (LoggingBridgeData):</b></li></ul>
 
 ```sql
-CREATE  TABLE LoggingBridgeData (
+CREATE TABLE LoggingBridgeData (
     Id int NOT NULL AUTO_INCREMENT,
     First_Name varchar(255),
     Last_Name varchar(255),
@@ -138,11 +138,48 @@ CREATE  TABLE LoggingBridgeData (
 *Yes I know I spelled it wrong, but only I will know, we'll I guess you to but it has no effect on the UI and its all on the backend.*
 
 ```sql
-CREATE TABLE cordinates_test(
-id int NOT NULL AUTO_INCREMENT,
-lat float,
-lon float,
-MasterLggerNumber varchar(255)
+CREATE TABLE cordinates_test (
+    id int NOT NULL AUTO_INCREMENT,
+    lat float,
+    lon float,
+    MasterLggerNumber varchar(255)
 );
 ```
 
+<ul>
+<li>Develop Web Form to seamlessly update data and make it easy for the programs admin (who has no experience with databases) to easily update the database. This one is designed to update the bridge data table</li></ul>
+
+```html
+<!DOCTYPE html>
+
+<html>
+<body>
+    <form action="/MastersLoggingBridgeProgram/process.php" method="post">
+        First Name: <input type="text" name="firstname" required><br>
+        Last Name: <input type="text" name="lastname" required><br>
+        Paid: <input type="text" name="paid" required><br>
+        Number of 18': <input type="number" name="Number18" required><br>
+        Number of 20': <input type="number" name="Number20" required><br>
+        Number of 24': <input type="number" name="Number24" required><br>
+        Number of 30': <input type="number" name="Number30" required><br>
+        Master Logger Number: <input type="text" name="LoggerNumber" required><br>
+        <label for="BridgeType/s">Bridge Type/s:</label>
+        <select name="BridgeTypes" id="mySelected"></select><br>
+        Latitude: <input type="number" step="0.000000000000000001" name="lat"><br>
+        Longitude: <input type="number" step="0.000000000000000001" name="lon"><br>
+        Phone Number: <input type="text" name="Phone"><br>
+        <input type="submit" value="Submit">
+
+    </form>
+</body>
+
+<script>
+    var BridgeType = ["18", "20", "24", "30", "18, 20", "18, 24", "18, 20, 24, 30", "18, 20, 24", "20, 30", "20, 24, 30", "24, 30"]
+for (var i=0; i <= BridgeType.length - 1; i++){
+    document.getElementById("mySelected").innerHTML 
+    += `<option value=\"${BridgeType[i]}\"">${BridgeType[i]}</option>`; 
+}
+</script>
+    
+</html>
+```
