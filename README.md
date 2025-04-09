@@ -105,14 +105,14 @@ of $46.</li>
 <p>The primary goal of this map is to effectively communicate the impact of these bridges in reducing stream sediment, while also showing their locations, in a way that is easily accessible to the public. The system is designed to be user-friendly, allowing individuals with minimal background in databases or mapping to update both the database and the map simultaneously. This is accomplished through an HTML web form that inputs data into a MySQL database hosted on GoDaddy.com, using the PHP MySQLi plugin for seamless integration.</p>
 
 <ul>
-<li>Develop database server - August 2023 (Same one hosts the master logger database)</li>
-<li>Create database:</li></ul>
+<li><b>Develop database server - August 2023 (Same one hosts the master logger database)</b></li>
+<li><b>Create database:</b></li></ul>
 
 ```sql
 CREATE DATABASE KYLoggingBridge;
 ```
 <ul>
-<li>Crete Table (LoggingBridgeData):</li></ul>
+<li><b>Create Table (LoggingBridgeData):</b></li></ul>
 
 ```sql
 CREATE  TABLE LoggingBridgeData (
@@ -129,5 +129,19 @@ CREATE  TABLE LoggingBridgeData (
     MasterLoggerNumber varchar(255),
     Paid varchar(25),
     PRIMARY KEY (Id)
+);
+```
+
+<ul>
+<li>Create Table (cordinates_test)</li>
+*Yes I know I spelled it wrong, but only I will know, well I guess you to but it has no effect on the UI for someone*
+</ul>
+
+```sql
+CREATE TABLE cordinates_test(
+id int NOT NULL AUTO_INCREMENT,
+lat float,
+lon float,
+MasterLggerNumber varchar(255)
 );
 ```
