@@ -292,3 +292,7 @@ $results = mysqli_query($conn,$sql); // runs query to web database
 
 ?>
 ```
+
+<ul>
+<li>Develop web form to insert coordinate into coordinates database</li>
+</ul>
