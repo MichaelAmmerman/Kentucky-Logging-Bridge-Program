@@ -380,4 +380,5 @@ fputcsv($file, $csvHeader);
 
 ### Data Procurement and Map Development
 
-<p></p>
+<p>For this map several external layers were procured from the Census Bureau, United States Department of Agriculture, United States Forest Service, and the United States Geological Survey.</p>
+
