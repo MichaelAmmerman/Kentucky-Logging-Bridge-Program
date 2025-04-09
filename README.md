@@ -52,5 +52,13 @@ These best management practices are essential for minimizing environmental impac
 
 <img src="images\streamcrossingstudy_reeves_rf_2007_001.JPG"><figcaption>Culvert after a period of high rainfall (Photo Credit Dr. Jeffery Stringer, Uk Dept. of Forestry, UKY BMP Field guide)</figcaption>
 
-<img src="images\streamcrossingstudy_reeves_rf_2007_031.png"><figcaption>Chris Reeves skidding a log across a culvert during his masters project</figcaption>
+<img src="images\streamcrossingstudy_reeves_rf_2007_031.png"><figcaption>Chris Reeves skidding a log across a culvert during his masters project (Photo Credit Dr. Jeffery Stringer, Uk Dept. of Forestry, UKY BMP Field guide)</figcaption>
+
+<p>Kentucky Revised Statues require that at the completion of all timber harvesting jobs crossing are to be removed unless authorized to do so. This can be a hugh bottle neck in the process of retiring logging operations.</p>
+
+### Study on Headwater Streams in Eastern Kentucky and How Bridge types Effect Sediment input into Headwater Streams:
+*All the data in this section was procured from Chris Reeves masters study "Effectiveness of Elevated Skid Trail Headwater Stream Crossings in the Cumberland Plateau (2012)"*
+
+<p></p>
+
 
