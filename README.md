@@ -185,7 +185,7 @@ for (var i=0; i <= BridgeType.length - 1; i++){
 ```
 
 <ul>
-<li>Develop SQL and PHP code to insert submitted into database<br><li>Number18 - represents the number of 18 foot bridges that have been purchased</li><br><li>Number20 - represents the number of 20 foot bridges that have been purchased</li><br><li>Number18 - represents the number of 18 foot bridges that have been purchased</li></li></ul>
+<li>Develop SQL and PHP code to insert submitted into database<br><li>Number18 - represents the number of 18 foot bridges that have been purchased</li><br><li>Number20 - represents the number of 20 foot bridges that have been purchased</li><br><li>Number24 - represents the number of 24 foot bridges that have been purchased</li><br><li>Number30 - represents the number of 30 foot bridges that have been purchased</li></li></ul>
 
 ```sql
 INSERT INTO LoggingBridgeData(First_Name, Last_Name, Master_Logger, Bridge_Type, Number18, Number20, Number24, Number30, PhoneNumber, MasterLoggerNumber, Paid) 
