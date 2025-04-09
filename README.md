@@ -287,7 +287,8 @@ else{
 }
 
 
-$sql = "INSERT INTO LoggingBridgeData (LoggingBridgeData.First_Name, LoggingBridgeData.Last_Name, LoggingBridgeData.Master_Logger, LoggingBridgeData.Bridge_Type, LoggingBridgeData.Number18, LoggingBridgeData.Number20, LoggingBridgeData.Number24, LoggingBridgeData.Number30, LoggingBridgeData.PhoneNumber, LoggingBridgeData.MasterLoggerNumber, LoggingBridgeData.Paid) VALUES ('$firstName', '$lastName', '$paid', '$number18', '$number20', '$number24', '$number30', '$masterLoggerNumber', '$bridgeType', '$masterLoggerNumber', '$bridgeType', '$lat', '$lon', '$phoneNumber');"; // insert values into database
+$sql = "INSERT INTO LoggingBridgeData (LoggingBridgeData.First_Name, LoggingBridgeData.Last_Name, LoggingBridgeData.Master_Logger, LoggingBridgeData.Bridge_Type, LoggingBridgeData.Number18, LoggingBridgeData.Number20, LoggingBridgeData.Number24, LoggingBridgeData.Number30, LoggingBridgeData.PhoneNumber, LoggingBridgeData.MasterLoggerNumber, LoggingBridgeData.Paid) 
+VALUES ('$firstName', '$lastName', '$paid', '$number18', '$number20', '$number24', '$number30', '$masterLoggerNumber', '$bridgeType', '$masterLoggerNumber', '$bridgeType', '$lat', '$lon', '$phoneNumber');"; // insert values into database
 $results = mysqli_query($conn,$sql); // runs query to web database
 
 ?>
@@ -348,13 +349,19 @@ INSERT INTO cordinates_test (cordinates_test.lat, cordinates_test.lon, MasterLgg
 </ul>
 
 ```php
-$sql = "INSERT INTO cordinates_test (cordinates_test.lat, cordinates_test.lon, MasterLggerNumber) VALUES ('$lat', '$lon', '$masterNumber');"; // insert values into database
+$sql = "INSERT INTO cordinates_test (cordinates_test.lat, cordinates_test.lon, MasterLggerNumber) 
+VALUES ('$lat', '$lon', '$masterNumber');"; // insert values into database
 $results = mysqli_query($conn,$sql);
 ```
 
 <ul>
-<li>Create csv through PHP using data from the database for seamless integration into the web-map</li>
+<li>Create CSV through PHP using data from the database with two separate tables for seamless integration into the web-map. This query uses a left join to combine data from the two tables within the database. This is so that we can track changes of bridge locations without having to add new entries into the table set with purchaser data</li>
 </ul>
+
+```sql
+SELECT cordinates_test.lat, cordinates_test.lon, LoggingBridgeData.MasterLoggerNumber, LoggingBridgeData.Bridge_Type, LoggingBridgeData.Number18, LoggingBridgeData.Number20, LoggingBridgeData.Number24, LoggingBridgeData.Number30 FROM cordinates_test LEFT JOIN LoggingBridgeData ON cordinates_test.MasterLggerNumber = LoggingBridgeData.MasterLoggerNumber;
+
+```
 
 ```php
 $sql = "SELECT cordinates_test.lat, cordinates_test.lon, LoggingBridgeData.MasterLoggerNumber, LoggingBridgeData.Bridge_Type, LoggingBridgeData.Number18, LoggingBridgeData.Number20, LoggingBridgeData.Number24, LoggingBridgeData.Number30 FROM cordinates_test LEFT JOIN LoggingBridgeData ON cordinates_test.MasterLggerNumber = LoggingBridgeData.MasterLoggerNumber;";
@@ -368,3 +375,5 @@ fputcsv($file, $csvHeader);
   fclose($file);
 ?>
 ```
+<img src="images\cordMysql.JPG">
+<img src="images\loggigndatasql.JPG">
