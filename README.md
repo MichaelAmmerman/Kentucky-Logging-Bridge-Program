@@ -351,3 +351,20 @@ INSERT INTO cordinates_test (cordinates_test.lat, cordinates_test.lon, MasterLgg
 $sql = "INSERT INTO cordinates_test (cordinates_test.lat, cordinates_test.lon, MasterLggerNumber) VALUES ('$lat', '$lon', '$masterNumber');"; // insert values into database
 $results = mysqli_query($conn,$sql);
 ```
+
+<ul>
+<li>Create csv through PHP using data from the database for seamless integration into the web-map</li>
+</ul>
+
+```php
+$sql = "SELECT cordinates_test.lat, cordinates_test.lon, LoggingBridgeData.MasterLoggerNumber, LoggingBridgeData.Bridge_Type, LoggingBridgeData.Number18, LoggingBridgeData.Number20, LoggingBridgeData.Number24, LoggingBridgeData.Number30 FROM cordinates_test LEFT JOIN LoggingBridgeData ON cordinates_test.MasterLggerNumber = LoggingBridgeData.MasterLoggerNumber;";
+$results = mysqli_query($conn,$sql);
+$csvHeader = array("lat", "long", "MasterLoggerNumber", "Bridge_Type", "Number18", "Number20", "Number24", "Number30");
+$file = fopen("csv/mapCords.csv", "w"); // This will overright the current csv with in the folder
+fputcsv($file, $csvHeader);
+  while($row = mysqli_fetch_row($results)){
+    fputcsv($file, $row);
+  }
+  fclose($file);
+?>
+```
