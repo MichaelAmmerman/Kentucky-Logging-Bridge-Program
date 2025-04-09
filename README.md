@@ -240,3 +240,55 @@ echo $phoneNumber, "<br>";
 
 ?>
 ```
+
+<ul>
+<li>Adjust sql code to work within the php script</li>
+</ul>
+
+```php
+$sql = "INSERT INTO LoggingBridgeData (LoggingBridgeData.First_Name, LoggingBridgeData.Last_Name, LoggingBridgeData.Master_Logger, LoggingBridgeData.Bridge_Type, LoggingBridgeData.Number18, LoggingBridgeData.Number20, LoggingBridgeData.Number24, LoggingBridgeData.Number30, LoggingBridgeData.PhoneNumber, LoggingBridgeData.MasterLoggerNumber, LoggingBridgeData.Paid) VALUES ('$firstName', '$lastName', '$paid', '$number18', '$number20', '$number24', '$number30', '$masterLoggerNumber', '$bridgeType', '$masterLoggerNumber', '$bridgeType', '$lat', '$lon', '$phoneNumber');"; // insert values into database
+$results = mysqli_query($conn,$sql); // runs query to web database
+```
+
+<ul>
+<li>Combine PHP code and adjusted sql code to run action script</li>
+</ul>
+
+```php
+<?php 
+
+$servername = "208.109.75.17";
+$username = "mjam224";
+$password = "Wildcat3!";
+$database = "KYLoggingBridge";
+$tableNameForInputOfData = "KYLoggingBridge";
+
+$conn = mysqli_connect($servername, $username, $password, $database);
+
+if(!$conn){
+    die("Connection failed: " . mysqli_connect_error());
+
+}
+
+else{
+    date_default_timezone_set("America/New_York");
+    $firstName = $_POST["firstname"];
+    $lastName = $_POST["lastname"];
+    $paid = $_POST["paid"];
+    $number18 = $_POST["Number18"];
+    $number20 = $_POST["Number20"];
+    $number24 = $_POST["Number24"];
+    $number30 = $_POST["Number30"];
+    $masterLoggerNumber = $_POST["LoggerNumber"];
+    $bridgeType = $_POST["BridgeTypes"];
+    $lat = $_POST["lat"];
+    $lon = $_POST["lon"];
+    $phoneNumber = $_POST["Phone"];
+}
+
+
+$sql = "INSERT INTO LoggingBridgeData (LoggingBridgeData.First_Name, LoggingBridgeData.Last_Name, LoggingBridgeData.Master_Logger, LoggingBridgeData.Bridge_Type, LoggingBridgeData.Number18, LoggingBridgeData.Number20, LoggingBridgeData.Number24, LoggingBridgeData.Number30, LoggingBridgeData.PhoneNumber, LoggingBridgeData.MasterLoggerNumber, LoggingBridgeData.Paid) VALUES ('$firstName', '$lastName', '$paid', '$number18', '$number20', '$number24', '$number30', '$masterLoggerNumber', '$bridgeType', '$masterLoggerNumber', '$bridgeType', '$lat', '$lon', '$phoneNumber');"; // insert values into database
+$results = mysqli_query($conn,$sql); // runs query to web database
+
+?>
+```
