@@ -1,12 +1,12 @@
 # Assessing the Economic, Environmental, and Public Engagement Impacts of the Kentucky Logging Bridge Program
+
 ## A Multi-Faceted Approach to Sustainable Forestry and Stream Protection in Rural Logging Operations
 
-*This project is intended to examine the potential effectiveness of the Kentucky Logging Bridge Program and how using dynamic web-based database systems can effectively be integrate with web-mapping to spread awareness of the effects the Kentucky Logging Bridge Program has on non-point source water pollution.*
-
+_This project is intended to examine the potential effectiveness of the Kentucky Logging Bridge Program and how using dynamic web-based database systems can effectively be integrate with web-mapping to spread awareness of the effects the Kentucky Logging Bridge Program has on non-point source water pollution._
 
 <img src="graphics\finallogotan.png" width="400"> <img src="graphics\Kmllogo_color_2014 wo background-2.png" width="400">
 
-## I. Introduction 
+## I. Introduction
 
 <p>Forests play a vital role in Kentucky’s economy, covering nearly half of the state's land and supporting a robust forest products industry that contributes over $13 billion annually. Logging, a fundamental part of this sector, provides raw materials for lumber, paper, and wood products, while also supporting thousands of jobs across rural communities. However, while essential to the economy, logging can also be a significant source of non-point source pollution. As trees are harvested and land is disturbed, rainwater runoff can carry sediment, nutrients, and other pollutants into nearby streams and rivers, impacting water quality and aquatic ecosystems. In the early to mid 90's public outrage over the degradation of water quality started to gain traction leading to The Kentucky General assembly to take action against agricultural and logging pollutions.</p>
 
@@ -57,7 +57,8 @@ These best management practices are essential for minimizing environmental impac
 <p>Kentucky Revised Statues require that at the completion of all timber harvesting jobs crossing are to be removed unless authorized to do so. This can be a hugh bottle neck in the process of retiring logging operations.</p>
 
 ### Study on Headwater Streams in Eastern Kentucky and How Bridge types Effect Sediment input into Headwater Streams:
-*All the data, charts, and graphs in this section was procured from Chris Reeves masters study "Effectiveness of Elevated Skid Trail Headwater Stream Crossings in the Cumberland Plateau (2012)"*
+
+_All the data, charts, and graphs in this section was procured from Chris Reeves masters study "Effectiveness of Elevated Skid Trail Headwater Stream Crossings in the Cumberland Plateau (2012)"_
 
 <p>Elevated stream crossings have been proven to significantly reduce sediment runoff at a minimal additional cost compared to other best management practices (BMPs) required for logging operations. Among the various types of temporary stream crossing, wooded bridges are most often the most expensive crossing type but have the shortest insulation time, lowest amount of deposits of sediment in streams, and are considered to be the most efficient crossing for skidding in a timely manner. This is most often being referred to as cycle time which is the time it takes to get logs from where they were felled and on to the log landing. Budgetary restricts are a large reason why wood bridges are not often used. The Kentucky Logging Bridge Program aims to fix this issue.</p>
 
@@ -65,7 +66,7 @@ These best management practices are essential for minimizing environmental impac
 
 <img src="images\Total_Sediment_Load .png">
 
-## Kentucky Logging Bridge Program: 
+## Kentucky Logging Bridge Program:
 
 ### Introduction
 
@@ -76,6 +77,7 @@ These best management practices are essential for minimizing environmental impac
 <p>The Kentucky Logging Bridge Program aims play a significant role in the state’s logging industry by making sustainable logging practices more affordable and accessible to small, family-owned logging operations. Typically, purchasing or renting heavy-duty bridges for stream crossings is prohibitively expensive, especially for rural, small-scale loggers who make up a significant portion of Kentucky’s logging community. The rent-to-own model employed by the program allows loggers to access high-quality temporary bridges without a large upfront investment. This approach reduces financial barriers and helps ensure that smaller logging companies remain competitive and compliant with state environmental regulations. Furthermore, by reducing the risk of fines associated with improper stream crossings, the program ensures that loggers can continue to operate smoothly, protecting their economic interests.
 
 Cost Model - The Cost is %25 percent of the Actual Bridge:
+
 <ul>
 <li>18’ x 8” x 4’ at approximately $425. Rented/sold at a rate of $106.25- or six-monthly
 payments of $18.</li>
@@ -111,6 +113,7 @@ of $46.</li>
 ```sql
 CREATE DATABASE KYLoggingBridge;
 ```
+
 <ul>
 <li><b>Create Table (LoggingBridgeData):</b></li></ul>
 
@@ -135,7 +138,7 @@ CREATE TABLE LoggingBridgeData (
 <ul>
 <li>Create Table (cordinates_test):</li></ul>
 
-*Yes I know I spelled it wrong, but only I will know, we'll I guess you to but it has no effect on the UI and its all on the backend.*
+_Yes I know I spelled it wrong, but only I will know, we'll I guess you to but it has no effect on the UI and its all on the backend._
 
 ```sql
 CREATE TABLE cordinates_test (
@@ -153,34 +156,49 @@ CREATE TABLE cordinates_test (
 <!DOCTYPE html>
 
 <html>
-<body>
+  <body>
     <form action="/MastersLoggingBridgeProgram/process.php" method="post">
-        First Name: <input type="text" name="firstname" required><br>
-        Last Name: <input type="text" name="lastname" required><br>
-        Paid: <input type="text" name="paid" required><br>
-        Number of 18': <input type="number" name="Number18" required><br>
-        Number of 20': <input type="number" name="Number20" required><br>
-        Number of 24': <input type="number" name="Number24" required><br>
-        Number of 30': <input type="number" name="Number30" required><br>
-        Master Logger Number: <input type="text" name="LoggerNumber" required><br>
-        <label for="BridgeType/s">Bridge Type/s:</label>
-        <select name="BridgeTypes" id="mySelected"></select><br>
-        Latitude: <input type="number" step="0.000000000000000001" name="lat"><br>
-        Longitude: <input type="number" step="0.000000000000000001" name="lon"><br>
-        Phone Number: <input type="text" name="Phone"><br>
-        <input type="submit" value="Submit">
-
+      First Name: <input type="text" name="firstname" required /><br />
+      Last Name: <input type="text" name="lastname" required /><br />
+      Paid: <input type="text" name="paid" required /><br />
+      Number of 18': <input type="number" name="Number18" required /><br />
+      Number of 20': <input type="number" name="Number20" required /><br />
+      Number of 24': <input type="number" name="Number24" required /><br />
+      Number of 30': <input type="number" name="Number30" required /><br />
+      Master Logger Number:
+      <input type="text" name="LoggerNumber" required /><br />
+      <label for="BridgeType/s">Bridge Type/s:</label>
+      <select name="BridgeTypes" id="mySelected"></select
+      ><br />
+      Latitude:
+      <input type="number" step="0.000000000000000001" name="lat" /><br />
+      Longitude:
+      <input type="number" step="0.000000000000000001" name="lon" /><br />
+      Phone Number: <input type="text" name="Phone" /><br />
+      <input type="submit" value="Submit" />
     </form>
-</body>
+  </body>
 
-<script>
-    var BridgeType = ["18", "20", "24", "30", "18, 20", "18, 24", "18, 20, 24, 30", "18, 20, 24", "20, 30", "20, 24, 30", "24, 30"]
-for (var i=0; i <= BridgeType.length - 1; i++){
-    document.getElementById("mySelected").innerHTML 
-    += `<option value=\"${BridgeType[i]}\"">${BridgeType[i]}</option>`; 
-}
-</script>
-    
+  <script>
+    var BridgeType = [
+      "18",
+      "20",
+      "24",
+      "30",
+      "18, 20",
+      "18, 24",
+      "18, 20, 24, 30",
+      "18, 20, 24",
+      "20, 30",
+      "20, 24, 30",
+      "24, 30",
+    ];
+    for (var i = 0; i <= BridgeType.length - 1; i++) {
+      document.getElementById(
+        "mySelected"
+      ).innerHTML += `<option value=\"${BridgeType[i]}\"">${BridgeType[i]}</option>`;
+    }
+  </script>
 </html>
 ```
 
@@ -188,12 +206,12 @@ for (var i=0; i <= BridgeType.length - 1; i++){
 <li>Develop SQL and PHP code to insert submitted into database<li>Number18 - represents the number of 18 foot bridges that have been purchased</li><li>Number20 - represents the number of 20 foot bridges that have been purchased</li><li>Number24 - represents the number of 24 foot bridges that have been purchased</li><li>Number30 - represents the number of 30 foot bridges that have been purchased</li></li></ul>
 
 ```sql
-INSERT INTO LoggingBridgeData(First_Name, Last_Name, Master_Logger, Bridge_Type, Number18, Number20, Number24, Number30, PhoneNumber, MasterLoggerNumber, Paid) 
+INSERT INTO LoggingBridgeData(First_Name, Last_Name, Master_Logger, Bridge_Type, Number18, Number20, Number24, Number30, PhoneNumber, MasterLoggerNumber, Paid)
 VALUES (Value1, Value2, Value3, Value4, Value5, Value6, Value7, Value8, Value9, value10, value11);
 ```
 
 ```php
-<?php 
+<?php
 
 $servername = "208.109.75.17";
 $username = "mjam224";
@@ -255,7 +273,7 @@ $results = mysqli_query($conn,$sql); // runs query to web database
 </ul>
 
 ```php
-<?php 
+<?php
 
 $servername = "208.109.75.17";
 $username = "mjam224";
@@ -287,9 +305,8 @@ else{
 }
 
 
-$sql = "INSERT INTO LoggingBridgeData (LoggingBridgeData.First_Name, LoggingBridgeData.Last_Name, LoggingBridgeData.Master_Logger, LoggingBridgeData.Bridge_Type, LoggingBridgeData.Number18, LoggingBridgeData.Number20, LoggingBridgeData.Number24, LoggingBridgeData.Number30, LoggingBridgeData.PhoneNumber, LoggingBridgeData.MasterLoggerNumber, LoggingBridgeData.Paid) 
+$sql = "INSERT INTO LoggingBridgeData (LoggingBridgeData.First_Name, LoggingBridgeData.Last_Name, LoggingBridgeData.Master_Logger, LoggingBridgeData.Bridge_Type, LoggingBridgeData.Number18, LoggingBridgeData.Number20, LoggingBridgeData.Number24, LoggingBridgeData.Number30, LoggingBridgeData.PhoneNumber, LoggingBridgeData.MasterLoggerNumber, LoggingBridgeData.Paid)
 VALUES ('$firstName', '$lastName', '$paid', '$number18', '$number20', '$number24', '$number30', '$masterLoggerNumber', '$bridgeType', '$masterLoggerNumber', '$bridgeType', '$lat', '$lon', '$phoneNumber');"; // insert values into database
-$results = mysqli_query($conn,$sql); // runs query to web database
 
 ?>
 ```
@@ -302,15 +319,18 @@ $results = mysqli_query($conn,$sql); // runs query to web database
 <!DOCTYPE html>
 
 <html>
-<body>
+  <body>
     <form action="/MastersLoggingBridgeProgram/csvCreator.php" method="post">
-        Latitude (N): <input type="number" step="0.0000000001" name="lat" required><br>
-        Longitude (W): <input type="number" step="0.000000001" name="lon" required><br>
-        Master Logger Number: <input type="text" name="LoggerNumber" required><br>
-        <input type="submit" value="Submit">
-
+      Latitude (N):
+      <input type="number" step="0.0000000001" name="lat" required /><br />
+      Longitude (W):
+      <input type="number" step="0.000000001" name="lon" required /><br />
+      Master Logger Number:
+      <input type="text" name="LoggerNumber" required /><br />
+      <input type="submit" value="Submit" />
     </form>
-</body>
+  </body>
+</html>
 ```
 
 <ul>
@@ -328,12 +348,12 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
   }
-  
-  
+
+
     $lat = $_POST["lat"];
     $lon = $_POST["lon"];
     $masterNumber = $_POST["LoggerNumber"];
-  
+
 ```
 
 <ul>
@@ -349,7 +369,7 @@ INSERT INTO cordinates_test (cordinates_test.lat, cordinates_test.lon, MasterLgg
 </ul>
 
 ```php
-$sql = "INSERT INTO cordinates_test (cordinates_test.lat, cordinates_test.lon, MasterLggerNumber) 
+$sql = "INSERT INTO cordinates_test (cordinates_test.lat, cordinates_test.lon, MasterLggerNumber)
 VALUES ('$lat', '$lon', '$masterNumber');"; // insert values into database
 $results = mysqli_query($conn,$sql);
 ```
@@ -375,10 +395,70 @@ fputcsv($file, $csvHeader);
   fclose($file);
 ?>
 ```
+
 <img src="images\cordMysql.JPG">
 <img src="images\loggigndatasql.JPG"><figcaption>Look at the DataBase through the GUI MySQL Workbench</figcaption>
 
 ### Data Procurement and Map Development
 
 <p>For this map several external layers were procured from the Census Bureau, United States Department of Agriculture, United States Forest Service, and the United States Geological Survey.</p>
+<ul>
+<li>Downloaded shape file of KY from US Census Bureau</li>
+<li>Add shape file to QGIS and convert it to a geojson</li>
+<li>Load geojson into html, using ajax</li>
+</ul>
 
+```javascript
+fetch("data/kentucky.geojson") // KY geojson being added to map
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (kentucky) {
+    console.log(kentucky);
+    // Magic starts here
+    const dataLayer = L.geoJson(kentucky, {
+      style: function (feature) {
+        return {
+          color: "#000000",
+          weight: 3,
+          fillOpacity: 0,
+          fillColor: "#1f78b4",
+        };
+      },
+    }).addTo(map);
+    map.fitBounds(dataLayer.getBounds(), { padding: [50, 50] });
+  })
+  .catch(function (error) {
+    console.log(`Ruh roh! An error has occurred`, error);
+  });
+```
+
+<ul>
+<li>Downloaded shape file of KYRivers from US Census Bureau</li>
+<li>Add shape file to QGIS and convert it to a geojson</li>
+<li>Load geojson into html, using ajax</li>
+</ul>
+
+```javascript
+fetch("data/kentuckyRivers.geojson")
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (kentuckyRivers) {
+    console.log(kentuckyRivers);
+    // Magic starts here
+    L.geoJson(kentuckyRivers, {
+      style: function (feature) {
+        return {
+          color: "#0000ff",
+          weight: 1.5,
+          fillOpacity: 1,
+          fillColor: "#2AB8F5",
+        };
+      },
+    }).addTo(map);
+  })
+  .catch(function (error) {
+    console.log(`Ruh roh! An error has occurred`, error);
+  });
+```
