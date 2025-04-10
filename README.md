@@ -462,3 +462,69 @@ fetch("data/kentuckyRivers.geojson")
     console.log(`Ruh roh! An error has occurred`, error);
   });
 ```
+
+<ul>
+<li>Use PapaParse library to retrieve csv data and convert it into geojson. Use .push method to add properties into latitude and longitude</li>
+<li></li>
+</ul>
+
+```javascript
+Papa.parse("csv/mapCords.csv", {
+  download: true,
+  header: true,
+  complete: function (data) {
+    // data is accessible to us here
+    console.log("data: ", data);
+    processData(data);
+  },
+});
+let lat_long = [];
+let properties = [];
+
+function processData(data) {
+  for (let i of data.data) {
+    lat_long.push([Number(i.lat), Number(i.long)]);
+    properties.push([
+      String(i.Bridge_Type),
+      Number(i.Number18),
+      Number(i.Number20),
+      Number(i.Number24),
+      Number(i.Number30),
+    ]);
+  }
+
+  console.log(lat_long);
+  console.log(properties);
+}
+```
+
+<ul>
+<li>Integrate lat_long array and properties array to create mark and bind info to those markers</li>
+</ul>
+
+```javascript
+for (let i = 0; i < lat_long.length; i++) {
+  if (!lat_long[i] || !properties[i]) {
+    console.error("Missing data at index", i);
+    continue;
+  }
+  const count =
+    properties[i][1] + properties[i][2] + properties[i][3] + properties[i][4];
+  const adjustForSediment = count * 7700;
+
+  var loggingIcon = L.icon({
+    iconUrl: "graphics/Log_Bridge_Drop_Shadow2.png",
+    iconSize: [count * 5 + 20, count * 5 + 20],
+  });
+
+  const marker = L.marker(lat_long[i], { icon: loggingIcon });
+
+  marker.bindPopup(
+    `<strong>Bridge Type:</strong> ${properties[i][0]} ft<br>
+     <strong>Count:</strong> ${count}<br>
+     <strong>Sediment Prevented:</strong> ${adjustForSediment.toLocaleString()} kg`
+  );
+
+  marker.addTo(map);
+}
+```
