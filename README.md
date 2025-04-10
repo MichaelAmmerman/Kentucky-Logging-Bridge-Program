@@ -514,7 +514,7 @@ for (let i = 0; i < lat_long.length; i++) {
 
   var loggingIcon = L.icon({
     iconUrl: "graphics/Log_Bridge_Drop_Shadow2.png",
-    iconSize: [count * 5 + 20, count * 5 + 20],
+    iconSize: [count * 5 + 20, count * 5 + 20], // using 20 so that you get a base size, and simply multiplying it cause sizing integration issues
   });
 
   const marker = L.marker(lat_long[i], { icon: loggingIcon });
