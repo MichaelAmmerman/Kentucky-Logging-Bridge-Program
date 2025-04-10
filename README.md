@@ -538,7 +538,7 @@ for (let i = 0; i < lat_long.length; i++) {
 
 <p>The interactive map itself is overlaid with detailed land cover data, showing forested regions in green and hydrological networks in vibrant blue. Instead of standard circle markers, custom circular bridge icons are used to mark each logging bridge location. These thematic icons not only enhance the visual identity of the project but also help users quickly identify areas of interest and the sediment that is prevented. A matching footer at the bottom of the screen reinforces the project’s branding and includes a timestamp (“April, 2025”) along with a descriptive label. Together, the minimal UI elements and strategic design choices make the map both visually engaging and functionally effective for exploring the environmental impact of logging bridge installations across Kentucky.</p>
 
-##Conclusion
+## Conclusion
 
 <p>This map represents an ongoing effort to document and visualize the impact of the Kentucky Logging Bridge Program. As bridge installations continue across the state, this tool will evolve to include new locations, updated sediment reduction estimates, and additional layers of environmental data. The project is rooted in the goal of enhancing water quality by promoting best management practices in forestry operations, particularly by preventing sediment from entering Kentucky’s streams and rivers.</p>
 
