@@ -522,9 +522,18 @@ for (let i = 0; i < lat_long.length; i++) {
   marker.bindPopup(
     `<strong>Bridge Type:</strong> ${properties[i][0]} ft<br>
      <strong>Count:</strong> ${count}<br>
-     <strong>Sediment Prevented:</strong> ${adjustForSediment.toLocaleString()} kg`
+     <strong>Sediment Prevented:</strong> ${adjustForSediment.toLocaleString()} kg` 
   );
 
-  marker.addTo(map);
+  marker.addTo(map); 
 }
 ```
+### Application Layout
+
+<p>The layout of the Kentucky Logging Bridge Locations map is clean, structured, and visually balanced. It features a full-screen interactive map framed by a bold forest green header at the top and a matching footer at the bottom. The header contains the map’s title in large, white, bold text, establishing immediate context, while a clearly positioned "Map Info" button in the top-right corner invites users to access additional information without crowding the interface. The footer anchors the layout with a timestamp and descriptive label, reinforcing the map’s purpose and time frame. The main map area dominates the center, showcasing detailed land cover and stream data, with custom circular bridge icons distributed across Kentucky to mark bridge locations. This layout prioritizes clarity and usability, ensuring that the geographical information remains the focal point while maintaining a cohesive visual structure.</p>
+
+### User Interface
+
+<p>The Kentucky Logging Bridge Locations map features a clean, full-screen layout with a bold, visually cohesive design. A forest green header stretches across the top of the interface, presenting the map’s title in large, white, bold text for immediate clarity and impact. A “Map Info” button in the top-right corner provides an unobtrusive gateway to additional context or metadata. This layout keeps the interface simple and accessible while maintaining a professional appearance that aligns with the environmental focus of the project.</p>
+
+<p>The interactive map itself is overlaid with detailed land cover data, showing forested regions in green and hydrological networks in vibrant blue. Instead of standard circle markers, custom circular bridge icons are used to mark each logging bridge location. These thematic icons not only enhance the visual identity of the project but also help users quickly identify areas of interest and the sediment that is prevented. A matching footer at the bottom of the screen reinforces the project’s branding and includes a timestamp (“April, 2025”) along with a descriptive label. Together, the minimal UI elements and strategic design choices make the map both visually engaging and functionally effective for exploring the environmental impact of logging bridge installations across Kentucky.</p>
