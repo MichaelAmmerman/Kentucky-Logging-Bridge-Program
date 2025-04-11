@@ -213,9 +213,9 @@ VALUES (Value1, Value2, Value3, Value4, Value5, Value6, Value7, Value8, Value9, 
 ```php
 <?php
 
-$servername = "208.109.75.17";
-$username = "mjam224";
-$password = "Wildcat3!";
+$servername = "*";
+$username = "*";
+$password = "*";
 $database = "KYLoggingBridge";
 $tableNameForInputOfData = "KYLoggingBridge";
 
@@ -275,9 +275,9 @@ $results = mysqli_query($conn,$sql); // runs query to web database
 ```php
 <?php
 
-$servername = "208.109.75.17";
-$username = "mjam224";
-$password = "Wildcat3!";
+$servername = "*";
+$username = "*";
+$password = "*";
 $database = "KYLoggingBridge";
 $tableNameForInputOfData = "KYLoggingBridge";
 
@@ -338,9 +338,9 @@ VALUES ('$firstName', '$lastName', '$paid', '$number18', '$number20', '$number24
 </ul>
 
 ```php
-$servername = "208.109.75.17";
-$username = "mjam224";
-$password = "Wildcat3!";
+$servername = "*";
+$username = "*";
+$password = "*";
 $database = "KYLoggingBridge";
 
 $conn = mysqli_connect($servername, $username, $password, $database);
