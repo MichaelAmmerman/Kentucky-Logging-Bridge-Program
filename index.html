@@ -334,6 +334,49 @@
           pane: "top",
         }
       ).addTo(map);
+      fetch("data/ky-knockout.geojson")
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (kentuckyKnockout) {
+          console.log(kentuckyKnockout);
+          // Magic starts here
+          L.geoJson(kentuckyKnockout, {
+            style: function (feature) {
+              return {
+                color: "#f5f5dc",
+                weight: 1.5,
+                fillOpacity: 1,
+                fillColor: "#f5f5dc",
+              };
+            },
+          }).addTo(map);
+        })
+        .catch(function (error) {
+          console.log(`Ruh roh! An error has occurred`, error);
+        });
+
+      /*   fetch("data/KY-woodlands-by-WBD12-2021.json")
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (wood) {
+          console.log(wood);
+          // Magic starts here
+          L.geoJson(wood, {
+            style: function (feature) {
+              return {
+                color: "#000000",
+                weight: 1,
+                fillOpacity: 0,
+                fillColor: "#2AB8F5",
+              };
+            },
+          }).addTo(map);
+        })
+        .catch(function (error) {
+          console.log(`Ruh roh! An error has occurred`, error);
+        }); */
 
       fetch("data/kentucky.geojson")
         .then(function (response) {
@@ -420,10 +463,10 @@
 
           var loggingIcon = L.icon({
             iconUrl: "graphics/Log_Bridge_Drop_Shadow2.png",
-            iconSize: [count * 5 + 20, count * 5 + 20]
+            iconSize: [count * 5 + 20, count * 5 + 20],
           });
 
-          const marker = L.marker(lat_long[i], {icon: loggingIcon})
+          const marker = L.marker(lat_long[i], { icon: loggingIcon });
 
           marker.bindPopup(
             `<strong>Bridge Type:</strong> ${properties[i][0]} ft<br>
@@ -443,6 +486,22 @@
      test.push([45, 45]);
      console.log(test); */
       // Example of keeping your page fresh
+
+      // create a Leaflet control for the legend
+      const legendControl = L.control({
+        position: "topleft",
+      });
+
+      // when the control is added to the map
+      legendControl.onAdd = function (map) {
+        // create a new division element with class of 'legend' and return
+        const legend = L.DomUtil.create("div", "legend");
+        return legend;
+      };
+
+      // add the legend control to the map
+      legendControl.addTo(map);
+
       function setDate() {
         const date = new Date();
         const year = date.getFullYear();
