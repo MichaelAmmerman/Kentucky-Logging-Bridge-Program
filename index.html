@@ -473,18 +473,19 @@
 
       data.eachLayer(function (layer) {
         const props = layer.feature.properties;
-        const value = (props.woodland_acres / props.acres) * 100;
+        const value = (props.acres_woodlands / props.acres) * 100;
+        const density = ((props.acres_woodlands)/(props.acres/1000))
         const color = colorize(value, breaks, colorScale);
         layer.setStyle({
           fillColor: color,
           color: color,
         });
-
+        console.log(props);
         const content = `<strong>Watershed:</strong> ${props.name}<br>
           <strong>Acres:</strong> ${props.acres.toLocaleString()} acres<br>
-          <strong>Woodlands:</strong> ${props.woodland_acres.toLocaleString()} acres<br>
+          <strong>Woodlands:</strong> ${props.acres_woodlands.toLocaleString()} acres<br>
           <strong>Percent woodland:</strong> ${value.toFixed(1)}%
-          <strong>Relative density:</strong> ${props.intensity.toFixed(1)}`
+          <strong>Relative density:</strong> ${props.mean.toFixed(1)}%`
 
         layer.on("click", function (e) {
           watershedInfo.innerHTML = content;

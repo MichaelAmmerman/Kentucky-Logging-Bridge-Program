@@ -4,7 +4,8 @@
 
 _This project is intended to examine the potential effectiveness of the Kentucky Logging Bridge Program and how using dynamic web-based database systems can effectively be integrate with web-mapping to spread awareness of the effects the Kentucky Logging Bridge Program has on non-point source water pollution._
 
-<img src="graphics\finallogotan.png" width="400"> <img src="graphics\Kmllogo_color_2014 wo background-2.png" width="400">
+<img src="graphics\finallogotan.png" width="400"> <img src="graphics\Kmllogo_color_2014 wo background-2.png" width="400"><br>
+<img src="images\MapImage.png">
 
 ## I. Introduction
 
