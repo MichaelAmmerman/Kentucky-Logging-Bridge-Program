@@ -7,8 +7,8 @@
   <title>Kentucky Logging Bridge Program (Bridge Locations)</title>
   <link rel="icon" type="image/x-icon" href="graphics\android-chrome-512x512.png" />
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
@@ -47,22 +47,27 @@
       background: #2d2f31;
     }
 
-    .legend {
-      font-family: Lato, sans-serif;
-      padding: 6px 8px;
-      font-size: 1em;
-      background: rgba(75, 75, 75, 0.8);
-      color: whitesmoke;
+    #legend {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+      background: rgba(215, 215, 215, 0.8);
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
       border-radius: 5px;
-      width: 160px;
+      width: 300px;
+    }
+
+    .legend {
+      padding: 6px 8px;
+      font-size: 1em;
+
     }
 
     .legend h3 {
       font-size: 1.1em;
       font-weight: bold;
       line-height: 1em;
-      color: whitesmoke;
       margin: 0;
     }
 
@@ -208,7 +213,34 @@
   </div>
 
   <!-- legend is outside of container-fluid and will be dynamically added to map -->
-  <div class="legend d-flex flex-column px-3 py-2" id="legend"></div>
+  <div class="legend d-flex flex-column px-3 py-2" id="legend">
+    <h3>Legend</h3>
+
+    <div>
+      <img src="graphics/Log_Bridge_Drop_Shadow2.png" width="40px" alt=""> Deployed bridges
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="woodlands" checked>
+      <label class="form-check-label" for="woodlands">
+        Woodlands
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="hillshade" checked>
+      <label class="form-check-label" for="hillshade">
+        Shaded Relief
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="watersheds">
+      <label class="form-check-label" for="watersheds">
+        Watersheds
+      </label>
+    </div>
+    <div id="watershed-info" class="visually-hidden">
+      Select watershed to view statistics
+    </div>
+  </div>
 
   <!-- ui is outside of container-fluid and will be dynamically added to map -->
   <!---<div class="form-group me-3 mt-3" id="dropdown-ui">
@@ -220,8 +252,8 @@
   </div> -->
 
   <!-- Add Bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
     crossorigin="anonymous"></script>
   <!-- then Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
@@ -236,36 +268,6 @@
     integrity="sha512-8TVPS0EFkkmtT6yPb5K4csnSt3tjbKRrs0F8gvTNKv2OxOcwDO7+Klkz86gMVrzfqtZos5N2a+k+r9D+hlccmQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
-    // Add footer date
-    setDate();
-
-    // set global variables for header, map container, and footer
-    const header = document.querySelector("header");
-    const mapContainer = document.querySelector("#map");
-    const footer = document.querySelector("footer");
-
-    // set map height to fill window
-    mapContainer.style.height =
-      window.innerHeight - header.offsetHeight - footer.offsetHeight + "px";
-
-    // initial Leaflet map options
-    const options = {
-      // center: [38, -86],
-      zoom: 7,
-      zoomSnap: 0.5,
-      zoomControl: false,
-      attributionControl: false,
-    };
-
-    // create Leaflet map and apply options
-    const map = L.map("map", options);
-
-    setPanes = ["base", "shade", "canopy", "watersheds", "bridges", "labels"];
-    setPanes.forEach((pane, i) => {
-      map.createPane(pane);
-      map.getPane(pane).style.zIndex = 401 + i;
-    });
-
     const dataLayers = {
       tiles: {
         base: {
@@ -273,26 +275,30 @@
           attribution:
             '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
           opacity: 1,
-          pane: "base"
+          pane: "base",
+          onLoad: false
         },
         hillshade: {
           url: "https://nyc3.digitaloceanspaces.com/astoria/tiles/ky-hillshade/{z}/{x}/{y}.jpg",
           attribution:
             '&copy; <a href="https://geography.uky.edu">UKy Geography</a> contributors',
           opacity: 1,
-          pane: "shade"
+          pane: "shade",
+          onLoad: true
         },
         canopy: {
           url: "https://astoria.nyc3.digitaloceanspaces.com/tiles/ky-canopy-2021/{z}/{x}/{y}.png",
           attribution: '',
           opacity: 0.25,
-          pane: "canopy"
+          pane: "canopy",
+          onLoad: true
         },
         "labels": {
           url: "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_only_labels/{z}/{x}/{y}{r}.png",
           attribution: '',
           opacity: 1,
-          pane: "labels"
+          pane: "labels",
+          onLoad: true
         }
       },
       renderedTiles: {},
@@ -305,19 +311,21 @@
             fillOpacity: 1,
             fillColor: "#ccc",
           },
-          pane: "watersheds"
+          pane: "watersheds",
+          interactive: false,
+          onLoad: true
         },
         "watersheds": {
           url: "data/KY-woodlands-by-WBD12-2021.json",
           style: {
-            color: "#0000ff",
-            weight: 1.5,
+            weight: 0.5,
             fillOpacity: 1,
-            fillColor: "#2AB8F5",
           },
           pane: "watersheds",
           colors: ["#dbdbdb", "#609e46"],
-          breaks: [20, 40, 50, 60, 70, 80, 90, 100]
+          breaks: [20, 40, 50, 60, 70, 80, 90, 100],
+          interactive: true,
+          onLoad: false
         },
         "kentucky": {
           url: "data/kentucky.geojson",
@@ -327,11 +335,14 @@
             fillOpacity: 0,
             fillColor: "#1f78b4",
           },
-          pane: "watersheds"
+          pane: "watersheds",
+          interactive: false,
+          onLoad: true
         }
       },
       renderedJsons: {},
     }
+    const map = addMap();
 
     addBridges("csv/mapCords.csv")
     addJsonData().then(() => {
@@ -339,6 +350,25 @@
       setUI();
     });
     addRasterTiles()
+
+    function addMap() {
+      const options = {
+        zoom: 7,
+        zoomSnap: 0.5,
+        zoomControl: false,
+        attributionControl: false,
+      };
+      const map = L.map("map", options);
+      setPanes = ["base", "shade", "canopy", "watersheds", "bridges", "labels"];
+      setPanes.forEach((pane, i) => {
+        map.createPane(pane);
+        map.getPane(pane).style.zIndex = 401 + i;
+      });
+      resizeElements()
+      setDate();
+      window.addEventListener("resize", resizeElements);
+      return map;
+    }
 
     function addBridges(url) {
       Papa.parse(url, {
@@ -360,7 +390,10 @@
           attribution: tileLayer.attribution,
           opacity: tileLayer.opacity,
           pane: tileLayer.pane
-        }).addTo(map);
+        })
+        if (tileLayer.onLoad) {
+          renderedTiles[t].addTo(map);
+        }
       }
     }
 
@@ -373,10 +406,14 @@
         const data = await response.json();
         renderedJsons[g] = L.geoJson(data, {
           style: geojson.style,
-          pane: geojson.pane
-        }).addTo(map);
+          pane: geojson.pane,
+          interactive: geojson.interactive,
+        });
         if (g === "kentucky") {
           map.fitBounds(renderedJsons[g].getBounds(), { padding: [50, 50] });
+        }
+        if (geojson.onLoad) {
+          renderedJsons[g].addTo(map);
         }
       }
     }
@@ -427,26 +464,101 @@
     }
 
     function styleWatersheds(data) {
-      data.remove();
+      const watershedInfo = document.querySelector("#watershed-info");
       const attrs = dataLayers.geojsons.watersheds;
       const colors = attrs.colors;
       const breaks = attrs.breaks;
       const colorScale = colorGradient(colors[0], colors[1], breaks.length);
+      console.log(data)
 
       data.eachLayer(function (layer) {
         const props = layer.feature.properties;
-        const value = (props.acres_woodlands / props.acres) * 100;
+        const value = (props.woodland_acres / props.acres) * 100;
         const color = colorize(value, breaks, colorScale);
         layer.setStyle({
           fillColor: color,
           color: color,
-          opacity: 0.3,
-
-          fillOpacity: 0.7
         });
+
+        const content = `<strong>Watershed:</strong> ${props.name}<br>
+          <strong>Acres:</strong> ${props.acres.toLocaleString()} acres<br>
+          <strong>Woodlands:</strong> ${props.woodland_acres.toLocaleString()} acres<br>
+          <strong>Percent woodland:</strong> ${value.toFixed(1)}%
+          <strong>Relative density:</strong> ${props.intensity.toFixed(1)}`
+
+        layer.on("click", function (e) {
+          watershedInfo.innerHTML = content;
+        });
+
+        layer.on("mouseover", function (e) {
+          e.target.setStyle({
+            color: "darkred",
+            weight: 2,
+          });
+          layer.bringToFront();
+        });
+
+        layer.on("mouseout", function (e) {
+          e.target.setStyle({
+            color: color,
+            weight: attrs.style.weight,
+          });
+          layer.bringToFront();
+        });
+
       });
 
     }
+
+    function setUI() {
+      const woodlands = document.querySelector("#woodlands");
+      const watersheds = document.querySelector("#watersheds");
+      const hillshade = document.querySelector("#hillshade");
+      const hillshadeLayer = dataLayers.renderedTiles.hillshade;
+      const woodlandLayer = dataLayers.renderedTiles.canopy;
+      const baseLayer = dataLayers.renderedTiles.base;
+      const watershedLayer = dataLayers.renderedJsons.watersheds;
+      watershedInfo = document.querySelector("#watershed-info");
+      woodlands.addEventListener("change", function (e) {
+        if (e.target.checked) {
+          woodlandLayer.addTo(map);
+        } else {
+          map.removeLayer(woodlandLayer);
+        }
+      });
+      hillshade.addEventListener("change", function (e) {
+        if (e.target.checked) {
+          hillshadeLayer.addTo(map);
+          map.removeLayer(baseLayer);
+        } else {
+          map.removeLayer(hillshadeLayer);
+          baseLayer.addTo(map);
+        }
+      });
+      watersheds.addEventListener("change", function (e) {
+        if (e.target.checked) {
+          watershedLayer.addTo(map);
+          watershedInfo.classList.remove("visually-hidden");
+        } else {
+          watershedInfo.innerHTML = "Select watershed to view statistics";
+          map.removeLayer(watershedLayer);
+          watershedInfo.classList.add("visually-hidden");
+        }
+      });
+    }
+
+    function resizeElements() {
+      // set global variables for header, map container, and footer
+      const header = document.querySelector("header");
+      const mapContainer = document.querySelector("#map");
+      const footer = document.querySelector("footer");
+      const legend = document.querySelector("#legend");
+      mapContainer.style.height =
+        window.innerHeight - header.offsetHeight - footer.offsetHeight + "px";
+      legend.style.top =
+        header.offsetHeight + 10 + "px";
+    }
+
 
     function setDate() {
       const date = new Date();
