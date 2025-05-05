@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <title>Kentucky Logging Bridge Program (Bridge Locations)</title>
-  <link rel="icon" type="image/x-icon" href="graphics\android-chrome-512x512.png" />
+  <link rel="icon" type="image/x-icon" href="/graphics/favicon-32x32.png" />
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
@@ -56,6 +56,7 @@
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
       border-radius: 5px;
       width: 300px;
+      
     }
 
     .legend {
@@ -69,11 +70,13 @@
       font-weight: bold;
       line-height: 1em;
       margin: 0;
+      padding-bottom: 10px;
     }
 
     .legend h3 span {
       font-size: 1.3em;
       margin: 0 20px 0 0;
+      padding: 30px;
     }
 
     .legend ul {
@@ -127,6 +130,10 @@
       left: 0;
       margin-left: -12px;
       border-right-color: rgba(0, 0, 0, 0.4);
+    }
+
+    #leg{
+      padding-bottom: 10px;
     }
 
     /* Small devices (landscape phones, 576px and up) */
@@ -216,7 +223,7 @@
   <div class="legend d-flex flex-column px-3 py-2" id="legend">
     <h3>Legend</h3>
 
-    <div>
+    <div id="leg">
       <img src="graphics/Log_Bridge_Drop_Shadow2.png" width="40px" alt=""> Deployed bridges
     </div>
     <div class="form-check">
